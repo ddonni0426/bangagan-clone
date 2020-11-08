@@ -1,0 +1,8 @@
+@charset 'utf-8';
+@import 'functions';
+
+@mixin dropDown_active($topPos) {
+  @include headTop($topPos);
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba($color: #777, $alpha: 0.3);
+}

@@ -1,0 +1,33 @@
+@mixin setPosition($pos, $s_top, $s_left, $s_right, $s_bottom, $zIndex) {
+  position: $pos;
+  top: $s_top;
+  left: $s_left;
+  right: $s_right;
+  bottom: $s_bottom;
+  @include setZ_index($zIndex);
+}
+
+@mixin setZ_index($zIdx) {
+  z-index: $zIdx;
+}
+
+@mixin setFlex($display, $justify_cnt, $align_itm) {
+  display: $display;
+  justify-content: $justify_cnt;
+  align-items: $align_itm;
+}
+@mixin headTop($topValue) {
+  top: $topValue;
+}
+contentTitle {
+  h2.content-title {
+    margin: 40px auto;
+    text-align: center;
+    font-size: 2.4rem;
+    color: #333;
+  }
+
+  h2.content-title span {
+    font-weight: normal;
+  }
+}

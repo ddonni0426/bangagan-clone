@@ -1,0 +1,126 @@
+@import 'functions';
+$font-stack: 'Noto Serif KR', sans-serif;
+$primary-color: #333;
+
+.commonDesc {
+  @include setPosition(absolute, 28vh, none, 25%, none, null);
+  max-height: 100%;
+
+  &.labtop {
+    top: 16.5vw;
+    button {
+      height: 35px;
+      font-size: 14px;
+    }
+  }
+
+  &.tablet {
+    top: 4.5vw;
+    text-align: center;
+  }
+
+  &.mobile {
+    min-width: 100%;
+    margin-top: 20%;
+    top: 0.4%;
+    right: 0;
+    text-align: center;
+
+    button {
+      width: 120px;
+      height: 32px;
+      font-size: 14px;
+    }
+  }
+
+  strong {
+    font: 400 1.7vw $font-stack;
+    margin-bottom: 15px;
+
+    &::after {
+      display: block;
+      content: '';
+    }
+
+    &.tablet {
+      font-size: 24px;
+    }
+
+    &.mobile {
+      font-size: 18px;
+    }
+  }
+
+  small {
+    font: 300 1.1vw $font-stack;
+
+    &::after {
+      margin-bottom: 16px;
+      display: block;
+      content: '';
+    }
+
+    &.tablet {
+      font-size: 16px;
+    }
+
+    &.mobile {
+      font-size: 14px;
+    }
+  }
+
+  button {
+    font-size: 1em;
+    border: 2px solid $primary-color;
+    width: 10.7vw;
+    height: 54px;
+    outline: none;
+
+    &:hover {
+      font-weight: bold;
+      color: #fff;
+      background: $primary-color;
+    }
+
+    &.tablet {
+      font-size: 14px;
+      width: 140px;
+      height: 39px;
+    }
+  }
+}
+
+//애니메이션
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
